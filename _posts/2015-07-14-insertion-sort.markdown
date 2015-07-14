@@ -58,7 +58,7 @@ Press ENTER to continue...
 
 The following figure describes a run instance of the above program.
 
-![Insertion sort at work]({{ site.baseurl }}/assets/insertion-sort.png)
+![Insertion sort at work]({{ site.baseurl }}/assets/images/insertion-sort.png)
 
 The analysis is pretty simple. The best case when the array is already sorted in which case the only traversal is going to all the element once. The worst case is when the array is sorted in reverse order. The average case occurs when the first index element is greater than half of the elements and smaller than the other half.
 
