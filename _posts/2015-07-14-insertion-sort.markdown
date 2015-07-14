@@ -27,7 +27,7 @@ description: Simple implementation and analysis
  20 
  21 int main(int argc, char* argv[]) {
  22 
- 23         int arr[] = {10, -99, 89, 8, 0, 0, 11, 189, 90, -90};
+ 23         int arr[] = {10, -99, 89, 8, 0, 0, 11, 189};
  24         int n = sizeof(arr)/sizeof(int);
  25         int i,j;
  26 
@@ -46,8 +46,20 @@ description: Simple implementation and analysis
  39 }
 {% endhighlight %}
 
-The analysis is pretty simple. The following figure describes a run instance of the above program.
+After running,
+{% highlight c %}
+Before sort
+10	-99	89	8	0	0	11	189	
+Press ENTER to continue...
+After sort
+-99	0	0	8	10	11	89	189	
+Press ENTER to continue...
+{% endhighlight %}
 
+The following figure describes a run instance of the above program.
 
-[jekyll-gh]: https://github.com/mojombo/jekyll
-[jekyll]:    http://jekyllrb.com
+![Insertion sort at work]({{ site.url }}/assets/insertion-sort.png)
+
+The analysis is pretty simple. The best case when the array is already sorted in which case the only traversal is going to all the element once. The worst case is when the array is sorted in reverse order. The average case occurs when the first index element is greater than half of the elements and smaller than the other half.
+
+Thus, best case = O(n), worst case = O(n^2), average case = O(n^2/2) = O(n^2)
